@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("i", "jk", "<Esc>")
-vim.keymap.set("n", "<leader>qq", "<cmd>qa<CR>")
+vim.keymap.set("n", "<leader>qq", "<cmd>qa!<CR>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })

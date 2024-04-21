@@ -1,2 +1,8 @@
+-- require("lualine").setup({
+-- 	options = {
+-- 		theme = "tokyonight",
+-- 	},
+-- 	sections = { lualine_c = { require("auto-session.lib").current_session_name } },
+-- })
 -- require("leap").create_default_mappings()
 -- vim: ts=2 sts=2 sw=2 et

@@ -1,3 +1,4 @@
+require("cnt.globals")
 require("cnt.settings")
 require("cnt.remap")
 require("cnt.autocmd")
