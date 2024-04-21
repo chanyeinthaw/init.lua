@@ -91,7 +91,7 @@ return {
 			-- vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 			vim.keymap.set("n", "<leader><leader>", function()
 				builtin.buffers()
-				send_escape()
+				-- send_escape()
 			end, { desc = "[ ] Find existing buffers" })
 
 			-- Slightly advanced example of overriding default behavior and theme
