@@ -1,3 +1,8 @@
+-- Lsp rename
+vim.keymap.set("n", "<leader>rn", function()
+	vim.lsp.buf.rename()
+end)
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("n", "<leader>qq", "<cmd>qa!<CR>")
