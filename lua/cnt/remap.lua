@@ -2,6 +2,12 @@
 -- vim.keymap.set("n", "<leader>rn", function()
 -- 	vim.lsp.buf.rename()
 -- end)
+--
+
+-- Add all missing imports
+vim.keymap.set("n", "<leader>a", "<cmd>TSToolsAddMissingImports<CR>", {
+	desc = "[A]dd all missing imports",
+})
 
 vim.keymap.set("n", "<leader>se", function()
 	vim.cmd("w")
