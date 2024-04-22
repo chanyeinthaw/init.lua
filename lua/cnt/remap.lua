@@ -3,6 +3,13 @@
 -- 	vim.lsp.buf.rename()
 -- end)
 
+vim.keymap.set({ "n", "i" }, "<leader>se", function()
+	vim.cmd("w")
+	vim.cmd("e")
+end, {
+	desc = "[S]ave and [e]dit",
+})
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("n", "<leader>qq", "<cmd>qa!<CR>")
