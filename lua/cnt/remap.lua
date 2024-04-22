@@ -3,7 +3,7 @@
 -- 	vim.lsp.buf.rename()
 -- end)
 
-vim.keymap.set({ "n", "i" }, "<leader>se", function()
+vim.keymap.set("n", "<leader>se", function()
 	vim.cmd("w")
 	vim.cmd("e")
 end, {
