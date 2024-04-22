@@ -1,4 +1,5 @@
 return {
+	"windwp/nvim-ts-autotag",
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -14,6 +15,9 @@ return {
 				additional_vim_regex_highlighting = { "ruby" },
 			},
 			indent = { enable = true, disable = { "ruby" } },
+			autotag = {
+				enable = true,
+			},
 		},
 		config = function(_, opts)
 			-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
