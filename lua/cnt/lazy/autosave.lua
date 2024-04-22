@@ -3,6 +3,19 @@ return {
 		"pocco81/auto-save.nvim",
 		opts = {
 			enabled = true,
+			condition = function(buf)
+				if vim.bo[buf].filetype == "harpoon" then
+					return false
+				end
+
+				local fn = vim.fn
+				local utils = require("auto-save.utils.data")
+
+				if fn.getbufvar(buf, "&modifiable") == 1 and utils.not_in(fn.getbufvar(buf, "&filetype"), {}) then
+					return true -- met condition(s), can save
+				end
+				return false -- can't save
+			end,
 		},
 	},
 }
