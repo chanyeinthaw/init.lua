@@ -12,11 +12,11 @@ return {
 	cmd = "Neotree",
 	keys = {
 		{ "\\", ":Neotree reveal current<CR>", { desc = "NeoTree reveal" } },
-		{
-			"<leader>b",
-			":Neotree buffers current<CR>",
-			{ desc = "NeoTree buffers" },
-		},
+		-- {
+		-- 	"<leader>b",
+		-- 	":Neotree buffers current<CR>",
+		-- 	{ desc = "NeoTree buffers" },
+		-- },
 	},
 	opts = {
 		filesystem = {
