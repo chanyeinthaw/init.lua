@@ -3,9 +3,13 @@
 -- 	vim.lsp.buf.rename()
 -- end)
 --
+-- Delete all buffers except current
+vim.keymap.set("n", "<leader>bd", "<cmd>bd|e#|'\"<CR>", {
+	desc = "Delete all [b]uffers except current",
+})
 
 -- Add all missing imports
-vim.keymap.set("n", "<leader>a", "<cmd>TSToolsAddMissingImports<CR>", {
+vim.keymap.set("n", "<leader>ai", "<cmd>TSToolsAddMissingImports<CR>", {
 	desc = "[A]dd all missing imports",
 })
 
