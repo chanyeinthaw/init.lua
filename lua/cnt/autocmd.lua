@@ -21,4 +21,18 @@ end
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
+local function set_window_title()
+  local pwd = vim.cmd("pwd")
+  local rd = vim.fn.fnamemodify(pwd, ":p:h:t")
+	vim.opt.titlestring = rd
+end
+
+vim.api.nvim_create_autocmd({ "DirChanged" }, {
+	pattern = "*",
+	callback = set_window_title,
+})
+
+-- Set the initial window title
+set_window_title()
+
 -- vim: ts=2 sts=2 sw=2 et
