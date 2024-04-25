@@ -1,8 +1,3 @@
--- Lsp rename
--- vim.keymap.set("n", "<leader>rn", function()
--- 	vim.lsp.buf.rename()
--- end)
---
 -- Delete all buffers except current
 vim.keymap.set("n", "<leader>bd", "<cmd>bd|e#|'\"<CR>", {
 	desc = "Delete all [b]uffers except current",
@@ -10,7 +5,7 @@ vim.keymap.set("n", "<leader>bd", "<cmd>bd|e#|'\"<CR>", {
 
 vim.keymap.set("n", "<C-S-W>", function()
 	vim.cmd("bufdo bd")
-  vim.cmd("Neotree reveal current")
+	vim.cmd("Neotree reveal current")
 end, {
 	desc = "Close all buffers",
 })
