@@ -7,7 +7,7 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
+				lualine_c = {},
 				lualine_x = { "encoding", "filetype" },
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
@@ -21,7 +21,7 @@ return {
 				lualine_z = {},
 			},
 			tabline = {
-				lualine_a = { "buffers" },
+				lualine_a = { "filename" },
 				lualine_b = {},
 				lualine_c = {},
 				lualine_x = {},
