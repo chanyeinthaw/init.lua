@@ -36,6 +36,14 @@ vim.keymap.set("n", "zR", require("ufo").openAllFolds, {
 	desc = "Open all folds",
 })
 
+vim.keymap.set("n", "-", "<cmd>foldclose<CR>", {
+	desc = "Close code fold",
+})
+
+vim.keymap.set("n", "+", "<cmd>foldopen<CR>", {
+	desc = "Close code fold",
+})
+
 require("ufo").setup({
 	provider_selector = function(bufnr, filetype, buftype)
 		return { "lsp", "indent" }
