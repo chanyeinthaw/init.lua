@@ -11,7 +11,7 @@ return {
 	},
 	cmd = "Neotree",
 	keys = {
-		 { "\\", ":Neotree reveal right<CR>", { desc = "NeoTree reveal" } },
+		 { "\\", ":Neotree reveal current<CR>", { desc = "NeoTree reveal" } },
 		-- {
 		-- 	"<leader>b",
 		-- 	":Neotree buffers current<CR>",
@@ -21,7 +21,7 @@ return {
 	opts = {
 		filesystem = {
 			window = {
-				position = "right",
+				position = "current",
 				mappings = {
 					["\\"] = "close_window",
 				},
