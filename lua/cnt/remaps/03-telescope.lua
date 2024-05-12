@@ -2,13 +2,15 @@ function _G.telescope_remaps()
 	local builtin = require("telescope.builtin")
 
 	vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "[P]roject [F]iles" })
-	vim.keymap.set("n", "<leader>of", function()
+	vim.keymap.set("n", "<leader>o", function()
 		builtin.buffers(require("telescope.themes").get_dropdown({
 			winblend = 10,
 			previewer = false,
+			ignore_current_buffer = true,
+			sort_mru = true,
 		}))
 		-- send_escape()
-	end, { desc = "[O]pened [f]iles" })
+	end, { desc = "[O]pened files" })
 
 	vim.keymap.set("n", "/", function()
 		builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
