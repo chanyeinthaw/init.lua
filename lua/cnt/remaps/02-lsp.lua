@@ -48,4 +48,3 @@ function _G.lsp_attach_remaps(event)
 	end
 end
 
--- vim: ts=2 sts=2 sw=2 et

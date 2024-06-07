@@ -12,4 +12,3 @@ vim.api.nvim_create_autocmd({ "DirChanged" }, {
 -- Set the initial window title
 set_window_title()
 
--- vim: ts=2 sts=2 sw=2 et

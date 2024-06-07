@@ -78,4 +78,3 @@ vim.opt.hlsearch = true
 -- vim.opt.fillchars:append({
 -- 	fold = " ",
 -- })
--- vim: ts=2 sts=2 sw=2 et

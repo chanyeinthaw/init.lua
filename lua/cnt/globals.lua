@@ -3,4 +3,3 @@ function _G.send_escape()
 	vim.api.nvim_feedkeys(keys, "m", false)
 end
 
--- vim: ts=2 sts=2 sw=2 et

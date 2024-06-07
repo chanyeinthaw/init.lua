@@ -41,4 +41,3 @@ function _G.telescope_remaps()
 		builtin.find_files({ cwd = vim.fn.stdpath("config") })
 	end, { desc = "[S]earch [N]eovim files" })
 end
--- vim: ts=2 sts=2 sw=2 et

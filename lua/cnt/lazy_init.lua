@@ -33,4 +33,3 @@ require("lazy").setup({
 
 require("cnt.utils").glob_require("cnt/plugin_config")
 
--- vim: ts=2 sts=2 sw=2 et

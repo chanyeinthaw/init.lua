@@ -21,4 +21,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 -- vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
--- vim: ts=2 sts=2 sw=2 et
