@@ -4,5 +4,5 @@ return {
 	dependencies = {
 		"nvim-telescope/telescope-fzf-native.nvim",
 	},
+	branch = "feat-winbar-background-highlight"
 }
--- vim: set ts=2 sw=2 tw=80 noet :
