@@ -17,11 +17,11 @@ function _G.harpoon_remaps(harpoon)
 		end)
 	end
 
-	-- vim.keymap.set("n", "<C-S-P>", function()
-	-- 	harpoon:list():prev()
-	-- end)
-	-- vim.keymap.set("n", "<C-S-N>", function()
-	-- 	harpoon:list():next()
-	-- end)
+	vim.keymap.set("n", "<C-P>", function()
+		harpoon:list():prev()
+	end)
+	vim.keymap.set("n", "<C-N>", function()
+		harpoon:list():next()
+	end)
 end
 -- vim: ts=2 sts=2 sw=2 et
