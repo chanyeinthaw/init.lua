@@ -20,6 +20,7 @@ vim.opt.breakindent = true
 -- Use .editorconfig or modline
 -- vim.opt.tabstop = 2
 
+vim.opt.wrap = false
 vim.opt.title = true
 
 -- Save undo history

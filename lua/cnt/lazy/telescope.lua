@@ -75,6 +75,7 @@ return {
 
 				file_ignore_patterns = {
 					"node%_modules/.*",
+					"node_modules",
 				},
 			})
 

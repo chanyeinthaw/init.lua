@@ -11,7 +11,7 @@ return {
 	},
 	cmd = "Neotree",
 	keys = {
-		 { "\\", ":Neotree reveal current<CR>", { desc = "NeoTree reveal" } },
+		 { "\\", ":Neotree reveal float<CR>", { desc = "NeoTree reveal" } },
 		-- {
 		-- 	"<leader>b",
 		-- 	":Neotree buffers current<CR>",

@@ -14,13 +14,15 @@ return {
 		},
 		opts = {
 			notify_on_error = false,
-			format_on_save = function(bufnr)
-				-- Disable with a global or buffer-local variable
-				if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-					return
-				end
-				return { timeout_ms = 500, lsp_fallback = true }
-			end,
+			format_on_save = false,
+			-- format_on_save = function(bufnr)
+			-- 	return
+			-- 	-- Disable with a global or buffer-local variable
+			-- 	if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+			-- 		return
+			-- 	end
+			-- 	return { timeout_ms = 500, lsp_fallback = true }
+			-- end,
 			-- format_on_save = function(bufnr)
 			-- 	-- Disable "format_on_save lsp_fallback" for languages that don't
 			-- 	-- have a well standardized coding style. You can add additional
@@ -38,6 +40,7 @@ return {
 				--
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
+				go = { { "gofmt", "gofumpt" } },
 				javascript = { { "prettierd", "prettier" } },
 				typescript = { { "prettierd", "prettier" } },
 				javascriptreact = { { "prettierd", "prettier" } },
