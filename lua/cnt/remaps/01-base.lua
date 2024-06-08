@@ -6,12 +6,12 @@ end, {
 	desc = "Delete all [b]uffers except current",
 })
 
-vim.keymap.set("n", "<C-W>", function()
-	vim.cmd("bufdo bd")
-	vim.cmd("Neotree reveal float")
-end, {
-	desc = "Close all buffers and reveal Neotree",
-})
+-- vim.keymap.set("n", "<C-W>", function()
+-- 	vim.cmd("bufdo bd")
+-- 	vim.cmd("Neotree reveal float")
+-- end, {
+-- 	desc = "Close all buffers and reveal Neotree",
+-- })
 
 -- Add all missing imports
 vim.keymap.set("n", "<leader>ai", "<cmd>TSToolsAddMissingImports<CR>", {
