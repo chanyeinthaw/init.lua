@@ -1,14 +1,24 @@
 function _G.send_escape()
-	local keys = vim.api.nvim_replace_termcodes("<ESC>", true, false, true)
-	vim.api.nvim_feedkeys(keys, "m", false)
+  local keys = vim.api.nvim_replace_termcodes("<ESC>", true, false, true)
+  vim.api.nvim_feedkeys(keys, "m", false)
 end
 
 function _G.DeleteNamelessBuffers()
   local buffers = vim.api.nvim_list_bufs()
   for _, buf in ipairs(buffers) do
-    if vim.api.nvim_buf_get_name(buf) == '' and vim.api.nvim_buf_is_loaded(buf) then
-      vim.api.nvim_buf_delete(buf, {force = true})
+    if vim.api.nvim_buf_get_name(buf) == "" and vim.api.nvim_buf_is_loaded(buf) then
+      vim.api.nvim_buf_delete(buf, { force = true })
     end
+  end
+end
+
+function _G.current_bg_color()
+  local normal_hl = vim.api.nvim_get_hl(0, { name = 'Normal' })
+
+  if normal_hl then
+    return string.format("#%06x", normal_hl.bg)
+  else
+    return nil
   end
 end
 

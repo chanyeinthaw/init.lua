@@ -19,6 +19,7 @@ return {
 		-- },
 	},
 	opts = {
+    popup_border_style = "rounded",
 		filesystem = {
 			window = {
 				position = "current",
