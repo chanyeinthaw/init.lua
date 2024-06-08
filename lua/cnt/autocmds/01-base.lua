@@ -7,6 +7,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+
+
 -- function _G.set_terminal_keymaps()
 -- 	local opts = { buffer = 0 }
 -- 	vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)

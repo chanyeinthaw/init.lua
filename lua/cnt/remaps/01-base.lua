@@ -1,14 +1,17 @@
 -- Delete all buffers except current
-vim.keymap.set("n", "<leader>bd", "<cmd>bd|e#|'\"<CR>", {
+vim.keymap.set("n", "<leader>bd", function()
+  vim.cmd("w|%bd|e#")
+  DeleteNamelessBuffers()
+end, {
 	desc = "Delete all [b]uffers except current",
 })
 
--- vim.keymap.set("n", "<C-S-W>", function()
--- 	vim.cmd("bufdo bd")
--- 	vim.cmd("Neotree reveal current")
--- end, {
--- 	desc = "Close all buffers",
--- })
+vim.keymap.set("n", "<C-W>", function()
+	vim.cmd("bufdo bd")
+	vim.cmd("Neotree reveal float")
+end, {
+	desc = "Close all buffers and reveal Neotree",
+})
 
 -- Add all missing imports
 vim.keymap.set("n", "<leader>ai", "<cmd>TSToolsAddMissingImports<CR>", {
