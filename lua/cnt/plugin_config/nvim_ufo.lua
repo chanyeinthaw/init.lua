@@ -1,10 +1,10 @@
 function _G.fold_text()
-	local lines = vim.v.foldend - vim.v.foldstart - 1
-	return vim.fn.getline(vim.v.foldstart)
-		.. " .. "
-		.. lines
-		.. " lines .. "
-		.. vim.fn.getline(vim.v.foldend):gsub("^%s*", "")
+  local lines = vim.v.foldend - vim.v.foldstart - 1
+  return vim.fn.getline(vim.v.foldstart)
+    .. " .. "
+    .. lines
+    .. " lines .. "
+    .. vim.fn.getline(vim.v.foldend):gsub("^%s*", "")
 end
 
 vim.opt.foldenable = true
@@ -19,33 +19,33 @@ vim.opt.foldlevelstart = 99
 vim.opt.foldcolumn = "1"
 
 vim.keymap.set("n", "zK", function()
-	local winid = require("ufo").peekFoldedLinesUnderCursor()
+  local winid = require("ufo").peekFoldedLinesUnderCursor()
 
-	if not winid then
-		vim.lsp.buf.hover()
-	end
+  if not winid then
+    vim.lsp.buf.hover()
+  end
 end, {
-	desc = "Peek Fold",
+  desc = "Peek Fold",
 })
 
 vim.keymap.set("n", "zM", require("ufo").closeAllFolds, {
-	desc = "Close all folds",
+  desc = "Close all folds",
 })
 
 vim.keymap.set("n", "zR", require("ufo").openAllFolds, {
-	desc = "Open all folds",
+  desc = "Open all folds",
 })
 
 vim.keymap.set("n", "-", "<cmd>foldclose<CR>", {
-	desc = "Close code fold",
+  desc = "Close code fold",
 })
 
 vim.keymap.set("n", "+", "<cmd>foldopen<CR>", {
-	desc = "Close code fold",
+  desc = "Close code fold",
 })
 
 require("ufo").setup({
-	provider_selector = function(bufnr, filetype, buftype)
-		return { "lsp", "indent" }
-	end,
+  provider_selector = function(bufnr, filetype, buftype)
+    return { "lsp", "indent" }
+  end,
 })
