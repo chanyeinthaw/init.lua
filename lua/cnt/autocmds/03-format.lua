@@ -13,7 +13,7 @@ end, {
 vim.api.nvim_create_augroup("AutoFormatAug", { clear = true })
 
 vim.api.nvim_create_autocmd("BufLeave", {
-group = "AutoFormatAug",
+  group = "AutoFormatAug",
   pattern = "*",
   callback = function(a)
     require("conform").format({ async = true, lsp_fallback = true, bufnr = a.buf })
