@@ -45,3 +45,21 @@ function _G.conditional_delete_buffer(bufnr)
   require("telescope.actions").delete_buffer(bufnr)
 end
 -- vim.api.nvim_command('command! DeleteNamelessBuffers lua DeleteNamelessBuffers()')
+--
+
+function _G.file_exists_in_root(filename)
+  -- Get the current root directory
+  local root_dir = vim.fn.getcwd()
+
+  -- Construct the full path to the file
+  local file_path = root_dir .. "/" .. filename
+
+  -- Check if the file exists
+  local file = io.open(file_path, "r")
+  if file then
+    io.close(file)
+    return true
+  else
+    return false
+  end
+end

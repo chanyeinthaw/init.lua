@@ -1,3 +1,15 @@
+local function js_formatter_list()
+  local is_biome_exists = file_exists_in_root("biome.json")
+
+  if is_biome_exists then
+    return { "biome" }
+  end
+
+  return { { "prettierd", "prettier" } }
+end
+
+local js_formatters = js_formatter_list()
+
 return {
   { -- Autoformat
     "stevearc/conform.nvim",
@@ -41,12 +53,12 @@ return {
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         go = { { "gofmt", "gofumpt" } },
-        javascript = { { "prettierd", "prettier" } },
-        typescript = { { "prettierd", "prettier" } },
-        javascriptreact = { { "prettierd", "prettier" } },
-        typescriptreact = { { "prettierd", "prettier" } },
-        jsx = { { "prettierd", "prettier" } },
-        tsx = { { "prettierd", "prettier" } },
+        javascript = js_formatters,
+        typescript = js_formatters,
+        javascriptreact = js_formatters,
+        typescriptreact = js_formatters,
+        jsx = js_formatters,
+        tsx = js_formatters,
       },
     },
   },

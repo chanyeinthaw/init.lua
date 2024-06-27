@@ -16,6 +16,6 @@ vim.api.nvim_create_autocmd("BufLeave", {
   group = "AutoFormatAug",
   pattern = "*",
   callback = function(a)
-    require("conform").format({ async = true, lsp_fallback = true, bufnr = a.buf })
+    require("conform").format({ async = true, lsp_fallback = false, bufnr = a.buf })
   end,
 })

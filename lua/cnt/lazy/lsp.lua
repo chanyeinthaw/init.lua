@@ -47,7 +47,6 @@ return {
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
         --
-        -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
         -- emmet_ls = {
@@ -75,6 +74,8 @@ return {
         -- 		},
         -- 	},
         -- },
+        --
+        -- biome = {},
 
         lua_ls = {
           -- cmd = {...},
@@ -105,6 +106,20 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         "stylua", -- Used to format Lua code
+        "lua-language-server",
+        -- "biome",
+        -- "prettier",
+        -- "eslint-lsp",
+        --
+        -- "jq",
+        -- "json-lsp",
+        -- "yaml-language-server",
+        --
+        -- "intelephense",
+        -- "php-cs-fixer",
+        -- "phpcs",
+        --
+        -- "terraform-ls",
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
