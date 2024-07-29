@@ -5,7 +5,7 @@ local function js_formatter_list()
     return { "biome" }
   end
 
-  return { { "prettierd", "prettier" } }
+  return { "prettier" }
 end
 
 local js_formatters = js_formatter_list()
@@ -52,7 +52,7 @@ return {
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        go = { { "gofmt", "gofumpt" } },
+        go = { "gofmt" },
         javascript = js_formatters,
         typescript = js_formatters,
         javascriptreact = js_formatters,
