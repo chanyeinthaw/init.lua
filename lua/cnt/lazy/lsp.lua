@@ -77,6 +77,7 @@ return {
         --
         -- biome = {},
 
+        templ = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},

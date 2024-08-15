@@ -60,7 +60,7 @@ return {
             -- i = { ["<c-enter>"] = "to_fuzzy_refine" },
             n = {
               ["<C-d>"] = conditional_delete_buffer,
-            }
+            },
           },
         },
         -- pickers = {}
