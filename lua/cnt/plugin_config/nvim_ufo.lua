@@ -45,7 +45,14 @@ vim.keymap.set("n", "+", "<cmd>foldopen<CR>", {
 })
 
 require("ufo").setup({
+  enable_get_fold_virt_text = false,
+  open_fold_hl_timeout = 400,
+  close_fold_kinds_for_ft = {},
   provider_selector = function(bufnr, filetype, buftype)
+    if filetype == "yaml" then
+      return { "indent" }
+    end
+
     return { "lsp", "indent" }
   end,
 })
