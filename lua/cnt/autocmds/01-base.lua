@@ -1,13 +1,11 @@
 -- Higlight on yank. Try yap
 vim.api.nvim_create_autocmd("TextYankPost", {
-	desc = "Highlight when yanking (copying) text",
-	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-	callback = function()
-		vim.highlight.on_yank()
-	end,
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
-
-
 
 -- function _G.set_terminal_keymaps()
 -- 	local opts = { buffer = 0 }
@@ -22,4 +20,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 --
 -- -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 -- vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
-
