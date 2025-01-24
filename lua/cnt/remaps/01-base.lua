@@ -3,7 +3,7 @@ vim.keymap.set("n", "<leader>bd", function()
   vim.cmd("w|%bd|e#")
   DeleteNamelessBuffers()
 end, {
-	desc = "Delete all [b]uffers except current",
+  desc = "Delete all [b]uffers except current",
 })
 
 -- vim.keymap.set("n", "<C-W>", function()
@@ -15,15 +15,15 @@ end, {
 
 -- Add all missing imports
 vim.keymap.set("n", "<leader>ai", "<cmd>TSToolsAddMissingImports<CR>", {
-	desc = "[A]dd all missing imports",
+  desc = "[A]dd all missing imports",
 })
 
 -- Save current buffer and edit
 vim.keymap.set("n", "<leader>rl", function()
-	vim.cmd("w")
-	vim.cmd("e")
+  vim.cmd("w")
+  vim.cmd("e")
 end, {
-	desc = "[R]e[l]oad current buffer",
+  desc = "[R]e[l]oad current buffer",
 })
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
@@ -35,9 +35,9 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>q", function()
-	require("trouble").toggle()
+  require("trouble").toggle()
 end, {
-	desc = "Toggle diagnostic viewer",
+  desc = "Toggle diagnostic viewer",
 })
 
 -- Pane navigation keymaps
