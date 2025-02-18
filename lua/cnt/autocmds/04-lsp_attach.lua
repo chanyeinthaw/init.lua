@@ -6,7 +6,7 @@ local function conditional_detatch_lsp(client, name, file_name)
     local root_dir = client.config.root_dir or vim.loop.cwd()
     local deno_json = root_dir .. "/" .. file_name
     if vim.loop.fs_stat(deno_json) then
-      vim.notify("Detaching LSP client: " .. client.name .. " due to presence of " .. file_name, vim.log.levels.INFO)
+      -- vim.notify("Detaching LSP client: " .. client.name .. " due to presence of " .. file_name, vim.log.levels.INFO)
       client.stop()
     end
   end
