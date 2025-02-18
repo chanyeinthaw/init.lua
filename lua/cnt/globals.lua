@@ -44,6 +44,28 @@ function _G.conditional_delete_buffer(bufnr)
   end
   require("telescope.actions").delete_buffer(bufnr)
 end
+
+local function telescope_force_delete_buffer(prompt_bufnr)
+  local action_state = require("telescope.actions.state")
+  local current_picker = action_state.get_current_picker(prompt_bufnr)
+  current_picker:delete_selection(function(selection)
+    local ok = pcall(vim.api.nvim_buf_delete, selection.bufnr, { force = true })
+    return ok
+  end)
+end
+
+function _G.conditional_delete_buffer_force(bufnr)
+  local title = get_current_picker_title()
+
+  if title == "Sessions" then
+    local current_picker = require("telescope.actions.state").get_current_picker(bufnr)
+    local AutoSession = require("auto-session")
+    current_picker:delete_selection(function(selection)
+      AutoSession.DeleteSession(selection.path)
+    end)
+  end
+  telescope_force_delete_buffer(bufnr)
+end
 -- vim.api.nvim_command('command! DeleteNamelessBuffers lua DeleteNamelessBuffers()')
 --
 

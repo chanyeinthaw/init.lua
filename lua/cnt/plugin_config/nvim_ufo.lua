@@ -45,6 +45,7 @@ vim.keymap.set("n", "+", "<cmd>foldopen<CR>", {
 })
 
 require("ufo").setup({
+  preview = {},
   enable_get_fold_virt_text = false,
   open_fold_hl_timeout = 400,
   close_fold_kinds_for_ft = {},
