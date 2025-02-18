@@ -20,6 +20,7 @@ function _G.telescope_remaps()
   end, { desc = "[/] Fuzzily search in current buffer" })
 
   -- Telescope builtin remaps
+  vim.keymap.set("n", "<leader>sts", ":Telescope tmux sessions<CR>", { desc = "[S]earch [S]essions" })
   vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
   vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
   vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
