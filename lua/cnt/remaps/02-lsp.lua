@@ -12,7 +12,11 @@ function _G.lsp_attach_remaps(event)
   map("gd", require("telescope.builtin").lsp_definitions, "[G]o to definition")
   map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
   map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-  map("K", vim.lsp.buf.hover, "Hover Documentation")
+
+  -- map("K", vim.lsp.buf.hover, "Hover Documentation")
+  map("K", function()
+    require("pretty_hover").hover()
+  end, "Hover Documentation")
 
   map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
   map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
