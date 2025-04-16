@@ -24,7 +24,7 @@ return {
       })
 
       vim.keymap.set("n", "<leader>ss", function()
-        vim.cmd("SearchSession")
+        vim.cmd("SessionSearch")
         -- _G.send_escape()
       end, {
         desc = "[S]earch [s]essions",
