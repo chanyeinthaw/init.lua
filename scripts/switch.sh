@@ -33,6 +33,9 @@ function do_term() {
   tmux rename-window -t $session:term 'to-kill-later'
   tmux new-window -t $session -n term
   tmux send-keys -t $session:term "cd $target_dir" C-m
+  tmux split-window -h -t $session:term
+  tmux send-keys -t $session:term.1 "cd $target_dir" C-m
+  tmux select-pane -t $session:term.0
 
   tmux select-window -t $session:term
   tmux kill-window -t $session:to-kill-later
